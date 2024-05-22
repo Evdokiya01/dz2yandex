@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Админка игр</h1>
+    </header>
+    <main class="box">
+      <div class="add-game">
+        <button class="add-game__button">Добавить игру</button>
+      </div>
+      <ul class="games-list"></ul>
+    </main>
+    <template id="game-card">
+      <a href="" id="" target="_blank" class="game-link">
+        <article class="game-card">
+          <img src="" alt="" class="game-image" />
+          <div class="game__description-container">
+            <h2 class="game-title"></h2>
+            <p class="game-description"></p>
+          </div>
+        </article>
+      </a>
+    </template>
+    <dialog id="form-dialog">
+      <form class="game-form">
+        <div class="game-form__title">
+          <h2>Добавить игру</h2>
+          <button class="close-dialog">Закрыть</button>
+        </div>
+        <label class="form__label">
+          <span>Название</span>
+          <input name="title" required type="text" />
+        </label>
+        <label class="form__label">
+          <span>Ссылка на изображение</span>
+          <input name="image" required type="url" />
+        </label>
+        <label class="form__label">
+          <span>Ссылка на HTML-файл</span>
+          <input name="link" required type="url" />
+        </label>
+        <label class="form__label">
+          <span>Описание</span>
+          <textarea
+            name="description"
+            required
+          ></textarea>
+        </label>
+        <button type="submit">Добавить</button>
+        <span class="form__message"></span>
+      </form>
+    </dialog>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
